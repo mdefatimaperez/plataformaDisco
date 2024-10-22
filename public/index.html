@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kendrick Lamar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="site.js"></script>
+
+
+</head>
+
+<body class="bg-black font-mono">
+    <!-----------------------------------------NAVBAR--------------------------------------->
+    <nav class="bg-black">
+
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+
+                    <!-- MOBIL MENU BOOTON-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        id="mobile-menu-button" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Abrir menu</span>
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <!------------------------------------------------------------------------------------->
+
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <!--LOGO GIT HUB-->
+                    <div class="flex flex-shrink-0 items-center">
+                        <a href="https://github.com/mdefatimaperez">
+                            <img class="h-8 w-auto" src="img/git.png" alt="GitHub">
+                        </a>
+                    </div>
+                    <!--MENU OPCIONES , PC-->
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <a href="#bio"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Biografia</a>
+                            <a href="#albums"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Albums</a>
+                            <a href="#fotos"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Fotos</a>
+                            <a href="#event"
+                                class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Eventos</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Profile dropdown , PC -->
+                <div class="relative ml-3">
+                    <!--USER ICON-->
+                    <div>
+                        <button type="button"
+                            class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                            id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            <span class="absolute -inset-1.5"></span>
+                            <img class="h-8 w-8 rounded-full" src="img/user-icon.png" alt="Open user menu">
+                        </button>
+                    </div>
+
+                    <!-- USER MENU-->
+                    <div id="user-menu"
+                        class="hidden absolute right-0 z-10 mt-2 w-48 origin-top-right rounded-md bg-zinc-800 py-1 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                        role="menu" aria-orientation="vertical" aria-labelledby="user-menu-button" tabindex="-1">
+                        <a href="#" class="block px-4 py-2 text-sm text-[#94a3b8] hover:text-yellow-300" role="menuitem"
+                            tabindex="-1" id="user-menu-item-0">Mi Perfil</a>
+                        <a href="#" class="block px-4 py-2 text-sm text-[#94a3b8] hover:text-yellow-300" role="menuitem"
+                            tabindex="-1" id="user-menu-item-1">Configuracion</a>
+                        <a href="login.html" class="block px-4 py-2 text-sm text-[#94a3b8] hover:text-yellow-300"
+                            role="menuitem" tabindex="-1" id="user-menu-item-2">Cerrar Sesion</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!--MOBILE NAV MENU-->
+        <div id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2 hidden" id="mobile-menu-content">
+                <a href="#bio" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                    aria-current="page">Biografia</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Albums</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Fotos</a>
+                <a href="#"
+                    class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Eventos</a>
+            </div>
+        </div>
+
+    </nav>
+    <!-----------------------------------------BANER---------------------------------------->
+    <section>
+        <div class="bg-black text-white p-0"> <!---->
+            <div class="container mx-auto flex flex-col items-center justify-center md:flex-row my-12 md:my-24">
+                <div class="flex flex-col w-full lg:w-1/3 items-center justify-center items-end p-0">
+                    <h1 class="text-3xl md:text-5xl font-mono p-2 text-yellow-300 tracking-loose">Kendrick</h1>
+                    <h2 class="text-3xl md:text-5xl font-mono leading-relaxed md:leading-snug mb-2">Lamar
+                    </h2>
+                </div>
+                <div class="mt-12 mb-6 md:mb-0 md:mt-0 ml-0 md:ml-12 lg:w-2/3 flex flex-col justify-center">
+                    <div class="h-48 flex flex-wrap content-center">
+                        <div class="relative">
+                            <img class="inline-block rounded-full mt-28 hidden xl:block max-w-[220px]"
+                                src="img/kln1.webp">
+                        </div>
+                        <div class="relative"> <!--ESTA FOTO QUEDA EN MODO MOBIL-->
+                            <img class="inline-block rounded-full mt-24 md:mt-0  md:p-0 max-w-96 object-cover mb-7"
+                                src="img/kl.jpg">
+                        </div>
+                        <div class="relative">
+                            <img class="inline-block rounded-full mt-28 hidden lg:block max-w-[220px]"
+                                src="img/kln2.webp">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <br>
+    <!-----------------------------------------BIOGRAFIA----------------------------------->
+    <h1 id="bio" class="text-[#94a3b8] mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-5xl mt-6">BIOGRAFIA</h1>
+    <div class="text-[#94a3b8] mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <br>
+        <div class="wiki-container flex flex-row-reverse">
+            <ul class="factbox text-sm">
+                <li class="factbox-item">
+                    <h4 class="factbox-heading text-yellow-300 text-base">Fecha de nacimiento</h4>
+                    <p>17 Junio 1987 (37 años)</p>
+                </li>
+                <li class="factbox-item">
+                    <h4 class="factbox-heading text-yellow-300 text-base">Lugar de nacimiento</h4>
+                    <p>Compton, Los Angeles County, California, Estados Unidos</p>
+                </li>
+            </ul>
+            <div class="wiki">
+                <div class="wiki-content text-xl">
+                    <p>Kendrick Lamar Duckworth (17 Junio, 1987), es un rapero y cantautor americano nacido en Compton,
+                        California perteneciente a la firma Aftermath Entertainment. Consiguió llamar la atención
+                        después del
+                        lanzamiento en 2010 de su mixtape Overly Dedicated. En 2011, su album Section.80, lanzado
+                        exclusivamente
+                        a través de iTunes, se clasificó al instante como uno de los top lanzamientos digitales del año.
+                        Lamar
+                        ha acumulado un gran número de seguidores en internet y actualmente es miembro del grupo de Hip
+                        Hop
+                        Black Hippy, junto con Jay Rock, Schoolboy Q y Ab-Soul, además de haber trabajado con raperos
+                        como Snoop
+                        Dogg, Dr. Dre, Wiz Khalifa, Game, Drake, Busta Rhymes y Tech N9ne entre otros artistas
+                        conocidos.<br></p>
+                    <h4>Vida Privada</h4>
+                    <p>En el instituto, Centennial en Compton, Lamar fue un buen estudiante. Lamar dijo que ha visto
+                        familiares
+                        que muriéndose en sus sueños durante años. Tupac Shakur es su rapero favorito, y no solo ha
+                        influido en
+                        su música, si no que también en su día a día. En términos musicales, Kendrick Lamar a menudo ha
+                        sido
+                        comparado con Tupac Shakur.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- BOTON EDITAR BIO-->
+        <button class="bg-yellow-400 rounded-lg text-white py-4 px-5 text-2xl">
+            <a class="text-xl" href="#">
+                Editar este wiki
+            </a>
+        </button>
+    </div>
+    <!----------------------------------------ALBUMS-------------------------------------->
+    <br>
+    <h1 id="albums" class="text-[#94a3b8] mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-5xl mt-28">ALBUMS</h1>
+    <br>
+    <div class="flex justify-around items-center mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 flex-col md:flex-row">
+        <!------------------------------------------ALBUM 1------------------------->
+        <div class="max-h-full container bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl w-full md:max-w-xs md:w-auto mb-4 relative"
+            id="albumContainer1">
+            <img class="w-full cursor-pointer" src="img/ALBUM1.webp" alt="" id="albumImage1" />
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center py-2 text-yellow-300 hidden cursor-pointer"
+                id="hoverText1">CLICK AL ALBUM</div>
+            <div class="flex p-4 justify-between">
+                <div class="flex items-center space-x-2">
+                    <h2 class="text-gray-800 text-lg font-bold cursor-pointer">DAMN.</h2>
+                </div>
+                <div class="flex space-x-2">
+                    <div class="flex space-x-1 items-center">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 cursor-pointer"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </span>
+                        <span>50k</span>
+                    </div>
+                    <div class="flex space-x-1 items-center">
+                        <span class="favorite-icon"> <span>
+                                <svg id="svg" xmlns="http://www.w3.org/2000/svg"
+                                    class="h-7 w-7 text-red-500 hover:text-red-400 transition duration-100 cursor-pointer"
+                                    viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd"
+                                        d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                            </span>
+                        </span>
+                        <span>90k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------ALBUM 2------------------------->
+        <div class="max-w-xs container bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl w-full md:max-w-xs md:w-auto mb-4 relative"
+            id="albumContainer2">
+            <img class="w-full cursor-pointer" src="img/ALBUM2.webp" alt="" id="albumImage2" />
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center py-2 text-yellow-300 hidden cursor-pointer"
+                id="hoverText2">CLICK AL ALBUM</div>
+            <div class="flex p-4 justify-between">
+                <div class="flex items-center space-x-2">
+                    <h2 class="text-gray-800 font-bold cursor-pointer">Mr.Morale & The Big Steppers</h2>
+                </div>
+                <div class="flex space-x-2">
+                    <div class="flex space-x-1 items-center">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 cursor-pointer"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </span>
+                        <span>55k</span>
+                    </div>
+                    <div class="flex space-x-1 items-center">
+                        <span class="favorite-icon">
+                            <svg id="svg" xmlns="http://www.w3.org/2000/svg"
+                                class="h-7 w-7 text-red-500 hover:text-red-400 transition duration-100 cursor-pointer"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span>90k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!------------------------------------------ALBUM 3------------------------->
+        <div class="max-w-xs container bg-white rounded-xl shadow-lg transform transition duration-500 hover:scale-105 hover:shadow-2xl w-full md:max-w-xs md:w-auto mb-4 relative"
+            id="albumContainer3">
+            <img class="w-full cursor-pointer" src="img/ALBUM3.webp" alt="" id="albumImage3" />
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-center py-2 text-yellow-300 hidden cursor-pointer"
+                id="hoverText3">CLICK AL ALBUM</div>
+            <div class="flex p-4 justify-between">
+                <div class="flex items-center space-x-2">
+                    <h2 class="text-gray-800 text-lg font-bold cursor-pointer">Not Like Us</h2>
+                </div>
+                <div class="flex space-x-2">
+                    <div class="flex space-x-1 items-center">
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-gray-600 cursor-pointer"
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                            </svg>
+                        </span>
+                        <span>82k</span>
+                    </div>
+                    <div class="flex space-x-1 items-center">
+                        <span class="favorite-icon">
+                            <svg id="svg" xmlns="http://www.w3.org/2000/svg"
+                                class="h-7 w-7 text-red-500 hover:text-red-400 transition duration-100 cursor-pointer"
+                                viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                        <span>99k</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- BOTON AGREGAR ALBUM-->
+        <div class="flex flex-col">
+            <a href="addAlbum.html"
+                class="mt-4 px-5 py-4 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300">Agregar
+                Album</a>
+        </div>
+    </div>
+    <br>
+    <!----------------------------------------FOTOS-------------------------------------->
+    <h1 id="fotos" class="text-[#94a3b8] mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-5xl mt-28">FOTOS</h1>
+    <div class="grid gap-4 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-5xl mt-6">
+        <div>
+            <img class="h-auto w-full max-w-full rounded-lg object-contain object-center md:h-[400px]"
+                src="img/foto3.webp" alt="" />
+        </div>
+        <div class="grid grid-cols-5 gap-4">
+            <div>
+                <img src="img/foto1.webp" class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+                    alt="gallery-image" />
+            </div>
+            <div>
+                <img src="img/foto2.webp" class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+                    alt="gallery-image" />
+            </div>
+            <div>
+                <img src="img/foto3.webp" class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+                    alt="gallery-image" />
+            </div>
+            <div>
+                <img src="img/foto4.webp" class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+                    alt="gallery-image" />
+            </div>
+            <div>
+                <img src="img/foto5.webp" class="object-cover object-center h-20 max-w-full rounded-lg cursor-pointer"
+                    alt="gallery-image" />
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center mt-8 ">
+        <a href="#"
+            class="mt-8 px-5 py-4 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300">Agregar
+            Foto</a>
+    </div>
+    <!----------------------------------------EVENTOS-------------------------------------->
+    <h1 id="event" class="text-[#94a3b8] mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 text-5xl mt-28">EVENTOS</h1>
+    <br>
+    <div class="text-[#94a3b8] mb-6 mx-auto max-w-7xl px-2 sm:px-6 lg:px-8 mt-3">
+        <div class="grid grid-cols-12 gap-4">
+            <div class="col-span-6">
+                <h2 class="text-white text-xl mb-4">Próximos Conciertos</h2>
+                <ul class="list-disc pl-4">
+                    <li>
+                        <div class="flex items-center">
+                            <span class="text-white mr-2">15 de Diciembre</span>
+                            <span class="font-medium text-white">Ciudad de México</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <span class="text-white mr-2">23 de Diciembre</span>
+                            <span class="font-medium text-white">Rio de Janeiro</span>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="flex items-center">
+                            <span class="text-white mr-2">29 de Diciembre</span>
+                            <span class="font-medium text-white">Buenos Aires</span>
+                        </div>
+                    </li>
+
+                </ul>
+            </div>
+
+            <div class="col-span-6">
+                <div class="grid grid-cols-7 gap-2 text-center text-white">
+                    <div class="bg-yellow-500 py-2 rounded-t-md font-medium">L</div>
+                    <div class="bg-yellow-500 py-2 rounded-t-md font-medium">M</div>
+                    <div class="bg-yellow-500 py-2 rounded-t-md font-medium">Mi</div>
+                    <div class="bg-yellow-500 py-2 rounded-t-md font-medium">J</div>
+                    <div class="bg-yellow-500 py-2 rounded-t-md font-medium">V</div>
+                    <div class="bg-yellow-500 py-2 rounded-t-md font-medium">S</div>
+                    <div class="bg-yellow-500 py-2 rounded-t-md font-medium">D</div>
+                </div>
+
+                <div class="grid grid-cols-7 gap-2 text-xs">
+                    <!-- Días del mes -->
+                    <div class="py-1">1</div>
+                    <div class="py-1">2</div>
+                    <div class="py-1">3</div>
+                    <div class="py-1">4</div>
+                    <div class="py-1">5</div>
+                    <div class="py-1">6</div>
+                    <div class="py-1">7</div>
+                    <div class="py-1">8</div>
+                    <div class="py-1">9</div>
+                    <div class="py-1">10</div>
+                    <div class="py-1">11</div>
+                    <div class="py-1">12</div>
+                    <div class="py-1">13</div>
+                    <div class="py-1">14</div>
+                    <div class="py-1 rounded-md bg-yellow-500 text-white">15</div>
+                    <div class="py-1">16</div>
+                    <div class="py-1">17</div>
+                    <div class="py-1">18</div>
+                    <div class="py-1">19</div>
+                    <div class="py-1">20</div>
+                    <div class="py-1">21</div>
+                    <div class="py-1">22</div>
+                    <div class="py-1 rounded-md bg-yellow-500 text-white">23</div>
+                    <div class="py-1">24</div>
+                    <div class="py-1">25</div>
+                    <div class="py-1">26</div>
+                    <div class="py-1">27</div>
+                    <div class="py-1">28</div>
+                    <div class="py-1 rounded-md bg-yellow-500 text-white">29</div>
+                    <div class="py-1">30</div>
+                    <div class="py-1">31</div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <a href="compraTickets.html"
+            class=" mb-4 mt-4 px-5 py-4 bg-yellow-500 text-white rounded-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300">Comprar
+            Tickets</a>
+    </div>
+
+    <input type="text">
+    <button class="bg-pink enviar">Enviar</button>
+
+
+ <br>
+
+
+    <form action="http://localhost:3000/user" method="post">
+       <!--el nombre debe ser igual al del back(name)-->
+      <input type="text" name="nombre" placeholder="nombre">
+      <input type="text" name="apellido" placeholder="apellido">
+      <input type="email" name="email" placeholder="email">
+      <input type="text" name="contraseña" placeholder="contraseña">
+      <input type="submit">
+    </form>
+
+    <!--llamamos la info al front-->
+
+    <input class="idClase" type="text" placeholder="id">
+    <button class="getUser text-red-500">Obtener User</button>
+    <p class="nombre text-red-500"></p>
+    <p class="apellido text-red-500"></p>
+    <input type="text" disabled class="email text-red-500">
+    <input type="text" disabled class="contraseña text-red-500">
+
+
+
+
+
+
+
+    <!--se puede sumar axios desde npm-->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</body>
+
+</html>
